@@ -1,0 +1,12 @@
+<form #todoForm="ngForm" (submit)="submitAddTodo()">
+  <label for="message" class="d-block">Add new todo</label>
+  <input
+    class="todo-input"
+    name="messgae"
+    id="message"
+    placeholder="text"
+    [(ngModel)]="todoMessage"
+    required
+    ngModel />
+  <button type="submit" class="button" [disabled]="!todoForm.form.valid">Submit</button>
+</form>
