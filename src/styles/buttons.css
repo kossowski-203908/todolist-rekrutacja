@@ -1,0 +1,21 @@
+.button {
+  display: inline-block;
+  min-width: 60px;
+  font-weight: 400;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.button--transparent {
+  background: transparent;
+  border: none;
+}

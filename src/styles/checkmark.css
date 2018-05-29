@@ -1,0 +1,33 @@
+.checkmark {
+  display:inline-block;
+  width: 22px;
+  height:22px;
+  transform: rotate(45deg);
+}
+
+.checkmark__stem {
+  width: 6px;
+  height: 18px;
+  left: 11px;
+  top: 2px;
+}
+
+.checkmark__kick {
+  width: 8px;
+  height: 6px;
+  left: 5px;
+  top: 14px;
+}
+
+.checkmark__stem, .checkmark__kick {
+  position: absolute;
+  background-color: #007bff;
+}
+
+.checkmark:hover {
+  cursor: pointer;
+}
+
+.checkmark:hover .checkmark__stem, .checkmark:hover .checkmark__kick {
+  background: red;
+}

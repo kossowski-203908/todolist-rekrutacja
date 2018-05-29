@@ -1,3 +1,26 @@
-<div *ngFor="let element of todoElements">
-  {{element.message}}
+<ul class="todo-wrapper">
+  <li class="todo" *ngFor="let element of todoElements" [ngClass]="{'todo__done': element.done_at !== null}">
+    <div class="todo__mainContent">
+      <p class="todo__id">{{element.id}}.</p>
+      <p class="todo__message">{{element.message}}</p>
+
+      <button *ngIf="!element.done_at" (click)="doneTodo(element)" class="button--transparent">
+        <span class="checkmark">
+            <span class="checkmark__stem"></span>
+            <span class="checkmark__kick"></span>
+        </span>
+      </button>
+
+      <p class="todo__date" *ngIf="element.done_at">Done at: {{element.done_at | date:'yyyy-MM-dd HH:mm'}}</p>
+    </div>
+    <p class="todo__date">Created at: {{element.created_at | date:'yyyy-MM-dd HH:mm a z'}}</p>
+  </li>
+</ul>
+
+<app-todolist-add-element (addTodo)="addTodo($event)"></app-todolist-add-element>
+
+<div>
+  <p>Test errors:</p>
+  <button (click)="test()" class="button">Test</button>
 </div>
+

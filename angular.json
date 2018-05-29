@@ -22,7 +22,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles/buttons.css",
+              "src/styles/checkmark.css",
+              "src/styles/utils.css"
             ],
             "scripts": []
           },

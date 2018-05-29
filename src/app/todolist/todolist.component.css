@@ -1,0 +1,48 @@
+.todo-wrapper {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0 50px;
+  border: 1px solid #bbb;
+  box-shadow: 7px 10px 10px #bbb;
+}
+
+.todo-wrapper p {
+  margin: 0;
+}
+
+.todo {
+  position: relative;
+  padding: 15px 10px 15px 40px;
+  border-bottom: 1px solid #ddd;
+  transition: 500ms;
+}
+
+.todo__mainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo__date {
+  font-size: 11px;
+}
+
+.todo__done {
+  background-color: #f8f8f8;
+  color: gray;
+}
+
+.todo__message {
+  font-size: 18px;
+}
+
+.todo__done .todo__message {
+   text-decoration: line-through;
+ }
+
+.todo__id {
+  position: absolute;
+  left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
