@@ -9,23 +9,27 @@ export class HttpErrorService {
     let message = 'ERROR! ';
     switch (error.status) {
       case 400: {
-        message += 'Bad request - incorrect value\n' + error.message;
+        message += 'Bad request - incorrect value.\n' + error.message;
         break;
       }
       case 401: {
-        message += 'Unauthorized access\n' + error.message;
+        message += 'Unauthorized access.\n' + error.message;
         break;
       }
       case 402: {
-        message += 'Payment required\n' + error.message;
+        message += 'Payment required.\n' + error.message;
         break;
       }
       case 403: {
-        message += 'Forbidden access\n' + error.message;
+        message += 'Forbidden access.\n' + error.message;
         break;
       }
       case 404: {
-        message += 'Resource not found\n' + error.message;
+        message += 'Resource not found.\n' + error.message;
+        break;
+      }
+      case 500: {
+        message += 'The server failed to fulfil a request.\n' + error.message;
         break;
       }
       default: {

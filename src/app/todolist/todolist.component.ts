@@ -32,11 +32,4 @@ export class TodolistComponent implements OnInit {
       err => alert(err)
     );
   }
-
-  test() {
-   this.todolistService.test().subscribe(
-     e => e,
-     err => alert(err)
-   );
-  }
 }
